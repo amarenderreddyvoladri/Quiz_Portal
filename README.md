@@ -67,8 +67,8 @@ Inspired by online learning platforms, digital examination systems, and quiz-bas
 
 The application follows a **Layered Architecture** for separation of concerns and maintainability.
 
-
 ## 📁 Project Structure
+
 📦 src/main/java/com.exam
 ┣ 📂 controller // REST Controllers
 ┣ 📂 service // Business Logic Interfaces
