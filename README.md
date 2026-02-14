@@ -190,34 +190,35 @@ spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+```
 
-3️⃣ Run Application
+### 3️⃣ Run Application
 mvn clean install
 mvn spring-boot:run
 Server runs at: http://localhost:8181
 
-🔐 Security Implementation
+### 🔐 Security Implementation
 Role-based access control
 Encrypted passwords (BCrypt)
 Stateless authentication with JWT
 Secured endpoints based on user roles
 
-User Request → JWT Filter → Authentication Manager → Controller → Response
+### User Request → JWT Filter → Authentication Manager → Controller → Response
 
-🚀 Future Enhancements
+### 🚀 Future Enhancements
 📊 Result analytics & reports
 ⏱️ Quiz timer auto-submit
 📖 Swagger API documentation
 🐳 Docker & cloud deployment
 📄 Pagination & filtering
 
-🎯 Use Cases
+### 🎯 Use Cases
 🏫 Online examinations
 📝 Practice tests
 💼 Recruitment assessments
 🎮 Educational platforms
 
-🧾 Conclusion
+### 🧾 Conclusion
 This Quiz Portal Backend Application demonstrates:
 ✅ Real-world backend development
 ✅ Secure system design
