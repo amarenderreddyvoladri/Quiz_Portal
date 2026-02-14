@@ -79,7 +79,6 @@ The application follows a **Layered Architecture** for separation of concerns an
 ┣ 📂 security // Security Setup
 ┗ 📜 ExamPortalApplication.java
 
-
 ## 🧬 Database Design (ER Diagram)
 
 **Entities:**
