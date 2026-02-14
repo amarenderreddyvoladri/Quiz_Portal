@@ -198,32 +198,32 @@ mvn spring-boot:run
 Server runs at: http://localhost:8181
 
 ### 🔐 Security Implementation
-Role-based access control
-Encrypted passwords (BCrypt)
-Stateless authentication with JWT
-Secured endpoints based on user roles
+- Role-based access control
+- Encrypted passwords (BCrypt)
+- Stateless authentication with JWT
+- Secured endpoints based on user roles
 
 ### User Request → JWT Filter → Authentication Manager → Controller → Response
 
 ### 🚀 Future Enhancements
-📊 Result analytics & reports
-⏱️ Quiz timer auto-submit
-📖 Swagger API documentation
-🐳 Docker & cloud deployment
-📄 Pagination & filtering
+- 📊 Result analytics & reports
+- ⏱️ Quiz timer auto-submit
+- 📖 Swagger API documentation
+- 🐳 Docker & cloud deployment
+- 📄 Pagination & filtering
 
 ### 🎯 Use Cases
-🏫 Online examinations
-📝 Practice tests
-💼 Recruitment assessments
-🎮 Educational platforms
+- 🏫 Online examinations
+- 📝 Practice tests
+- 💼 Recruitment assessments
+- 🎮 Educational platforms
 
 ### 🧾 Conclusion
 This Quiz Portal Backend Application demonstrates:
-✅ Real-world backend development
-✅ Secure system design
-✅ Clean architecture
-✅ Industry-standard technologies
+- ✅ Real-world backend development
+- ✅ Secure system design
+- ✅ Clean architecture
+- ✅ Industry-standard technologies
 
 <hr>
 
