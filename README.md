@@ -225,4 +225,14 @@ This Quiz Portal Backend Application demonstrates:
 ✅ Clean architecture
 ✅ Industry-standard technologies
 
-<hr><div align="center"> <p> <strong>📧 For questions or collaboration, feel free to reach out!</strong> </p> <p> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"> <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white"> </p> <p>⭐ If you found this project helpful, consider giving it a star on GitHub!</p> </div> ```
+<hr>
+
+<div align="center">
+  <p><strong>📧 For questions or collaboration, feel free to reach out!</strong></p>
+  <p>
+    <a href="https://www.linkedin.com/in/amarender-reddy-voladri/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+    <a href="https://github.com/amarenderreddyvoladri"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+    <a href="mailto:amarenderreddy.voladri@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+  </p>
+  <p>⭐ If you found this project helpful, consider giving it a star on GitHub!</p>
+</div>
