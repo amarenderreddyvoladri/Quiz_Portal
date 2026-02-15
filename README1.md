@@ -1,55 +1,271 @@
-```markdown
-<h1 align="center">🎓 Quiz Portal Backend Application</h1>
-<p align="center"><strong>A Production-Ready Spring Boot Backend for Online Examination Systems</strong></p>
-<div align="center"><img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java"><img src="https://img.shields.io/badge/Spring%20Boot-3.1-brightgreen?style=for-the-badge&logo=springboot"><img src="https://img.shields.io/badge/Spring%20Security-6.1-blue?style=for-the-badge&logo=springsecurity"><img src="https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql"><img src="https://img.shields.io/badge/Maven-C2A120?style=for-the-badge&logo=apachemaven"><img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge"></div>
-<hr>
-<h2>📌 Overview</h2>
-<p>The <strong>Quiz Portal Backend Application</strong> is a secure, scalable, and modular REST API built using <strong>Spring Boot</strong>. It powers an online quiz & examination system, enabling administrators to manage quizzes and students to attempt them securely. This project reflects real-world backend development practices and is suitable for: 🎓 Academic projects 💼 Backend developer interviews 🌐 GitHub portfolio showcase</p>
-<h2>💡 Project Motivation & Idea</h2>
-<p><strong>Why This Project?</strong> I built this project to gain hands-on experience with real backend systems, focusing on: Authentication & authorization, RESTful API design, Database relationships, Secure application architecture. Online exams are widely used in education, hiring, and training platforms, making this a practical and industry-relevant system.</p>
-<p><strong>Idea Source</strong> The idea was inspired by: Online learning platforms, Digital examination systems, Quiz-based evaluation tools. The goal was to simulate how a real online exam backend works internally.</p>
-<h2>✨ Key Features</h2>
-<p><strong>🔐 Authentication & Security:</strong> Role-based authentication, Secure password encryption, Protected APIs using Spring Security<br>
-<strong>🧑‍💼 Admin Features:</strong> Create & manage quiz categories, Add quizzes under categories, Add and manage questions, Activate / deactivate quizzes<br>
-<strong>🎓 Student Features:</strong> View available quizzes, Attempt quizzes, Fetch quiz questions securely, Submit quiz responses</p>
-<h2>🛠️ Technology Stack</h2>
-<p><strong>Backend:</strong> Spring Boot, Spring MVC (REST APIs), Spring Data JPA, Spring Security, Hibernate ORM<br>
-<strong>Database:</strong> MySQL<br>
-<strong>Tools:</strong> Java 8+, Maven, Postman (API testing)</p>
-<h2>🏗️ Application Architecture</h2>
-<pre>Client (Frontend / Postman) ↓ Controller Layer ↓ Service Layer ↓ Repository Layer ↓ Database</pre>
-<p>✔ Follows Layered Architecture ✔ Ensures separation of concerns ✔ Easy to maintain & scale</p>
-<h2>📁 Project Structure</h2>
-<pre>src/main/java └── com.exam ├── controller // REST Controllers ├── service // Business Logic Interfaces ├── service.impl // Business Logic Implementations ├── repository // JPA Repositories ├── model // Entity Classes ├── config // Configuration ├── security // Security Setup └── ExamPortalApplication.java</pre>
-<h2>🧬 Database Design (ER Diagram)</h2>
-<p><strong>Entities:</strong> User, Role, Category, Quiz, Question<br>
-<strong>Relationships:</strong> [ROLE] 1 -------- 1 [USER], [CATEGORY] 1 -------- * [QUIZ], [QUIZ] 1 -------- * [QUESTION]<br>
-✔ Normalized database ✔ Minimal redundancy ✔ Clear relationships</p>
-<h2>📐 UML Diagrams (Textual Explanation)</h2>
-<p><strong>📘 Class Diagram:</strong> Each entity maps to a database table, Service & controller layers interact cleanly, Repository layer handles persistence<br>
-<strong>🔄 Sequence Diagram (Login Flow):</strong> User → Controller → Service → Security → Database ← JWT Token ←<br>
-<strong>👥 Use Case Diagram:</strong> Admin: Login, Manage categories, Manage quizzes, Add questions | Student: Login, View quizzes, Attempt quiz, Submit answers</p>
-<h2>🔄 Application Flow</h2>
-<p><strong>Admin Flow:</strong> Admin logs in → Creates categories → Adds quizzes → Adds questions → Activates quizzes<br>
-<strong>Student Flow:</strong> Student logs in → Views quizzes → Attempts quiz → Submits answers → Receives result</p>
-<h2>🔗 REST API Endpoints (Sample)</h2>
-<p><strong>Authentication:</strong> POST /generate-token, POST /user/<br>
-<strong>Category:</strong> POST /category/, GET /category/, PUT /category/, DELETE /category/{cid}<br>
-<strong>Quiz:</strong> POST /quiz/, GET /quiz/, GET /quiz/category/{cid}, DELETE /quiz/{qid}<br>
-<strong>Question:</strong> POST /question/, GET /question/quiz/{qid}</p>
-<h2>▶️ How to Run the Project</h2>
-<p><strong>1️⃣ Prerequisites:</strong> Java 8+, MySQL, Maven<br>
-<strong>2️⃣ Database Configuration:</strong> spring.datasource.url=jdbc:mysql://localhost:3306/exam_portal, spring.datasource.username=root, spring.datasource.password=your_password, spring.jpa.hibernate.ddl-auto=update, spring.jpa.show-sql=true<br>
-<strong>3️⃣ Run Application:</strong> mvn clean install, mvn spring-boot:run, Server runs at: http://localhost:8080</p>
-<h2>🔐 Security Implementation</h2>
-<p>Role-based access control, Encrypted passwords, Restricted endpoints, Secure API communication</p>
-<pre>User Request ↓ Controller ↓ Service ↓ Repository ↓ Database ↑ Response</pre>
-<h2>🚀 Future Enhancements</h2>
-<p>Result analytics & reports, Quiz timer auto-submit, Swagger API documentation, Docker & cloud deployment, Pagination & filtering</p>
-<h2>🎯 Use Cases</h2>
-<p>Online examinations, Practice tests, Recruitment assessments, Educational platforms</p>
-<h2>🧾 Conclusion</h2>
-<p>This Quiz Portal Backend Application demonstrates: Real-world backend development, Secure system design, Clean architecture, Industry-standard technologies</p>
-<hr>
-<div align="center"><p><strong>📧 For questions or collaboration, feel free to reach out!</strong></p><p><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></p><p>⭐ If you found this project helpful, consider giving it a star on GitHub!</p></div>
-```
+# QuizMaster Pro 🧠
+
+A full-featured quiz management system built with Angular, designed for educational institutions and trainers to create, manage, and evaluate quizzes with ease.
+
+## 📋 Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage Guide](#usage-guide)
+- [API Integration](#api-integration)
+- [Testing](#testing)
+- [Build & Deployment](#build--deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🔍 Overview
+
+QuizMaster Pro is a scalable Angular application that provides a complete quiz management solution. It features separate dashboards for administrators and regular users, secure authentication, and real-time quiz evaluation. The application follows Angular best practices with modular architecture, lazy loading, and comprehensive route protection.
+
+## ✨ Key Features
+
+### 🔐 Authentication Module
+- User registration and login with JWT
+- Password encryption and secure storage
+- Session management with token refresh
+- Role-based access control (Admin/User)
+
+### 👑 Admin Dashboard
+- **Category Management**: Create, edit, delete quiz categories
+- **Question Bank**: 
+  - Add multiple choice questions
+  - Set correct answers and explanations
+  - Upload images with questions
+  - Configure difficulty levels
+- **Quiz Builder**:
+  - Set time limits and passing criteria
+  - Randomize question order
+  - Schedule quiz availability
+  - View analytics and statistics
+- **User Management**: View and manage registered users
+- **Result Analysis**: Export results in CSV/PDF format
+
+### 👤 User Portal
+- **Available Quizzes**: Browse and attempt assigned quizzes
+- **Quiz Interface**:
+  - Real-time timer countdown
+  - Question navigation panel
+  - Mark for review functionality
+  - Progress indicator
+- **Instant Results**: Auto-graded with detailed feedback
+- **Performance History**: Track past attempts and scores
+- **Profile Management**: Update personal details and password
+
+### ⚡ Technical Features
+- Lazy loading for optimized performance
+- HTTP interceptors for token management
+- Reactive forms with custom validators
+- Route guards for protected views
+- Shared components for reusability
+- Custom pipes for data transformation
+- Error handling with user-friendly messages
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Angular 15+ | Frontend framework |
+| TypeScript 4.8+ | Programming language |
+| RxJS 7.5+ | Reactive programming |
+| Bootstrap 5 | UI styling |
+| Font Awesome | Icons |
+| JWT | Authentication |
+| Jasmine/Karma | Unit testing |
+
+## 📁 Project Structure
+quiz-master-pro/
+├── src/
+│ ├── app/
+│ │ ├── components/
+│ │ │ ├── footer/
+│ │ │ │ ├── footer.component.ts
+│ │ │ │ ├── footer.component.html
+│ │ │ │ └── footer.component.css
+│ │ │ └── navbar/
+│ │ │ ├── navbar.component.ts
+│ │ │ ├── navbar.component.html
+│ │ │ └── navbar.component.css
+│ │ │
+│ │ ├── pages/
+│ │ │ ├── admin/
+│ │ │ │ ├── dashboard/
+│ │ │ │ ├── categories/
+│ │ │ │ ├── questions/
+│ │ │ │ ├── quizzes/
+│ │ │ │ └── results/
+│ │ │ ├── home/
+│ │ │ ├── login/
+│ │ │ ├── profile/
+│ │ │ ├── signup/
+│ │ │ └── user/
+│ │ │ ├── dashboard/
+│ │ │ ├── quiz-attempt/
+│ │ │ └── history/
+│ │ │
+│ │ ├── services/
+│ │ │ ├── auth/
+│ │ │ │ ├── login.service.ts
+│ │ │ │ └── login.service.spec.ts
+│ │ │ ├── guards/
+│ │ │ │ ├── admin.guard.ts
+│ │ │ │ ├── admin.guard.spec.ts
+│ │ │ │ ├── user.guard.ts
+│ │ │ │ └── user.guard.spec.ts
+│ │ │ ├── interceptors/
+│ │ │ │ └── authinterceptor.ts
+│ │ │ ├── category.service.ts
+│ │ │ ├── category.service.spec.ts
+│ │ │ ├── question.service.ts
+│ │ │ ├── question.service.spec.ts
+│ │ │ ├── quiz.service.ts
+│ │ │ ├── quiz.service.spec.ts
+│ │ │ ├── result.service.ts
+│ │ │ ├── result.service.spec.ts
+│ │ │ ├── user.service.ts
+│ │ │ └── user.service.spec.ts
+│ │ │
+│ │ ├── models/
+│ │ │ ├── category.ts
+│ │ │ ├── category.spec.ts
+│ │ │ ├── question.ts
+│ │ │ ├── question.spec.ts
+│ │ │ ├── quiz.ts
+│ │ │ ├── quiz.spec.ts
+│ │ │ ├── result.ts
+│ │ │ ├── result.spec.ts
+│ │ │ ├── user.ts
+│ │ │ ├── user.spec.ts
+│ │ │ ├── userqna.ts
+│ │ │ └── userqna.spec.ts
+│ │ │
+│ │ ├── shared/
+│ │ │ ├── helper.ts
+│ │ │ └── constants.ts
+│ │ │
+│ │ ├── app-routing.module.ts
+│ │ ├── app.module.ts
+│ │ ├── app.component.ts
+│ │ ├── app.component.html
+│ │ ├── app.component.css
+│ │ └── app.component.spec.ts
+│ │
+│ ├── assets/
+│ │ ├── images/
+│ │ └── icons/
+│ │
+│ ├── environments/
+│ │ ├── environment.ts
+│ │ └── environment.prod.ts
+│ │
+│ ├── index.html
+│ ├── main.ts
+│ └── styles.css
+│
+├── .editorconfig
+├── .gitignore
+├── angular.json
+├── package.json
+├── README.md
+└── tsconfig.json
+
+
+## 💻 Installation
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- Angular CLI (v15+)
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/quiz-master-pro.git
+   cd quiz-master-pro
+   ```
+2. Install dependencies
+   npm install
+
+3. Install Angular CLI globally (if not installed)
+   npm install -g @angular/cli
+
+4. Start the development server
+   ng serve
+
+5. Navigate to http://localhost:4200
+
+## 🚀 Usage Guide
+Running the Application
+# Development server with hot reload
+ng serve
+
+# Development server on specific port
+ng serve --port 4200 --open
+
+# Build for production
+ng build --prod
+
+# Run unit tests
+ng test
+
+# Run e2e tests
+ng e2e
+
+Default Credentials
+Role	Email	Password
+Admin	admin@quiz.com	Admin@123
+User	user@quiz.com	User@123
+
+##🔌 API Integration
+The application expects a REST API with the following endpoints:
+
+### Authentication
+POST /api/auth/login - User login
+POST /api/auth/register - User registration
+POST /api/auth/refresh - Refresh token
+POST /api/auth/logout - User logout
+
+### Categories
+GET /api/categories - Get all categories
+POST /api/categories - Create category
+PUT /api/categories/:id - Update category
+DELETE /api/categories/:id - Delete category
+
+### Questions
+GET /api/questions - Get questions (with filters)
+POST /api/questions - Create question
+PUT /api/questions/:id - Update question
+DELETE /api/questions/:id - Delete question
+
+### Quizzes
+GET /api/quizzes - Get all quizzes
+GET /api/quizzes/active - Get active quizzes
+POST /api/quizzes - Create quiz
+POST /api/quizzes/:id/start - Start quiz attempt
+POST /api/quizzes/:id/submit - Submit quiz answers
+
+### Results
+GET /api/results/user - Get user results
+GET /api/results/quiz/:quizId - Get quiz results (admin)
+GET /api/results/:resultId - Get specific result
+
+### Users
+GET /api/users/profile - Get user profile
+PUT /api/users/profile - Update profile
+PUT /api/users/change-password - Change password
+
+## 🧪 Testing
+Unit Tests
+
+# Run all tests
+ng test
+
+# Run tests with coverage
+ng test --code-coverage
+
+# Run specific test file
+ng test --include=**/user.service.spec.ts
+
